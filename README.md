@@ -2,9 +2,12 @@
 <!-- HTML for the menu bar -->
 <nav>
   <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
+    <div id="navbar">
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+     </div>
   </ul>
 </nav>
 <html>
