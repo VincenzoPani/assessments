@@ -2,27 +2,19 @@
 <html>
   <head>
     <style>
-#navbar {
-  overflow: hidden;
-  background-color: #333;
-}
-#navbar a {
-  float: left;
+#navbar {overflow: hidden;
+  background-color: #333;}
+#navbar a {float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
-}
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-#navbar a.active {
-  background-color: #4CAF50;
-  color: white;
-}   
+  font-size: 17px;}
+#navbar a:hover {background-color: #ddd;
+  color: black;}
+#navbar a.active {background-color: #4CAF50;
+  color: white;}   
 <nav>
   <ul>
     <div id="navbar">
