@@ -25,4 +25,52 @@
       <p>Skills tests are a crucial part of the selection process because they provide a direct measure of a candidate's proficiency in a specific skill or set of skills. By using skills tests, you can ensure that candidates have the necessary abilities to perform the tasks required in the role. Skills tests can also provide valuable feedback to candidates, so they can improve their skills and succeed in their careers.</p>
     </li>
   </ul>
+  
+  <form>
+  <label for="search">Search:</label>
+  <input type="text" id="search" name="search">
+  <button type="submit">Go</button>
+</form>
+
+<ul>
+  <li>Aardvark</li>
+  <li>Bat</li>
+  <li>Cat</li>
+  <li>Dog</li>
+  <li>Eagle</li>
+</ul>
+
+<script>
+  // get the search input and the list of animals
+  const search = document.querySelector('#search');
+  const list = document.querySelector('ul');
+
+  // add an event listener to the search input
+  search.addEventListener('input', function() {
+    // get the search query
+    const query = this.value.toLowerCase();
+
+    // convert the list of animals to an array
+    const animals = Array.from(list.querySelectorAll('li'));
+
+    // sort the animals alphabetically
+    const sortedAnimals = animals.sort(function(a, b) {
+      return a.innerHTML.toLowerCase().localeCompare(b.innerHTML.toLowerCase());
+    });
+
+    // filter the animals based on the search query
+    const filteredAnimals = sortedAnimals.filter(function(animal) {
+      return animal.innerHTML.toLowerCase().includes(query);
+    });
+
+    // clear the list of animals
+    list.innerHTML = '';
+
+    // add the filtered and sorted animals to the list
+    filteredAnimals.forEach(function(animal) {
+      list.appendChild(animal);
+    });
+  });
+</script>
+
   </html>
